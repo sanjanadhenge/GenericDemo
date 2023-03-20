@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace GenericDemo
 {
-    public class DemoGeneric
+    public class DemoGeneric<T> where T : IComparable
     {
-        public void FindMax <T> (T a, T b, T c) where T : IComparable
+        public T a, b, c;
+        public DemoGeneric(T a, T b, T c)
+        {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+        }
+        public void FindMax () 
         {
             if (a.CompareTo(b) > 0 && a.CompareTo(c) > 0)
             {
