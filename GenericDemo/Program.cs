@@ -14,7 +14,7 @@ namespace GenericDemo
             bool flag = true;
             while(flag)
             {
-                Console.WriteLine("Select Option\n1.MaxInteger\n2.Exit");
+                Console.WriteLine("Select Option\n1.MaxInteger\n2.FloatMax\n3.Exit");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch(option)
                 {
@@ -22,6 +22,9 @@ namespace GenericDemo
                         demo.MaxInteger(10, 50, 100);
                         break;
                     case 2:
+                        demo.FolatMax(15.85, 98.45, 75.96);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
